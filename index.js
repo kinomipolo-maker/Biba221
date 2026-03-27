@@ -1,5 +1,4 @@
 export default function handler(req, res) {
-  // Генерируем размер от -20 до 30
   const size = Math.floor(Math.random() * 51) - 20;
   const absSize = Math.abs(size);
 
