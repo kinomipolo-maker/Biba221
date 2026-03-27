@@ -4,21 +4,13 @@ export default function handler(req, res) {
 
   let message = `, твоя биба: ${absSize} см! `;
 
-  if (size <= -10) {
-    message += "Пупупу, в другой раз повезёт?!";
-  } else if (size <= 0) {
-    message += "Эй, ты! Да, ты! сожалею тебе!";
-  } else if (size <= 5) {
-    message += "Ха-ха! Ну хоть что-то!";
-  } else if (size <= 10) {
-    message += "Ну… хотя бы не минус. Та и тут вроде холодно!";
-  } else if (size <= 20) {
-    message += "Мужик, ты валыну убери!";
-  } else if (size <= 25) {
-    message += "Сожалею, неудобно наверное...";
-  } else {
-    message += "Ого! Ты сбил счётчик!";
-  }
+  if (size <= -10)      message += "Пупупу, в другой раз повезёт?!";
+  else if (size <= 0)   message += "Эй, ты! Да, ты! сожалею тебе!";
+  else if (size <= 5)   message += "Ха-ха! Ну хоть что-то!";
+  else if (size <= 10)  message += "Ну… хотя бы не минус. Та и тут вроде холодно!";
+  else if (size <= 20)  message += "Мужик, ты валыну убери!";
+  else if (size <= 25)  message += "Сожалею, неудобно наверное...";
+  else                  message += "Ого! Ты сбил счётчик!";
 
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
   res.status(200).send(message);
